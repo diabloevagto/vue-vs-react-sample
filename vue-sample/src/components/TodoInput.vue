@@ -12,9 +12,8 @@ export default {
   },
   methods: {
     onClick() {
-      const { context } = this;
-
-      console.log(context);
+      this.$emit("addNewTodo", this.context);
+      this.context = "";
     }
   }
 };

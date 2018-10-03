@@ -7,8 +7,10 @@ class Todolist extends Component {
 
   onClick = () => {
     const { context } = this.state;
+    const { addNewTodo } = this.props;
 
-    console.log(context);
+    addNewTodo(context);
+    this.setState({ context: '' });
   };
 
   render() {
