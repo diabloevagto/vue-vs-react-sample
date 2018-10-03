@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './assets/logo.svg';
 
+import Todolist from './components/Todolist';
+
 class App extends Component {
   render() {
     return (
@@ -16,6 +18,7 @@ class App extends Component {
             }}
           />
         </header>
+        <Todolist />
       </div>
     );
   }
