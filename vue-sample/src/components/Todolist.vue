@@ -2,18 +2,16 @@
   <div>
     <h1>todo list</h1>
     <TodoInput v-on:addNewTodo="addNewTodo" />
-    <p
-      v-for="todo in todos"
-      :key="todo"
-    >{{todo}}</p>
+    <TodoDisplay :todos="todos" />
   </div>
 </template>
 
 <script>
 import TodoInput from "./TodoInput";
+import TodoDisplay from "./TodoDisplay";
 
 export default {
-  components: { TodoInput },
+  components: { TodoInput, TodoDisplay },
   data: function() {
     return { todos: [] };
   },

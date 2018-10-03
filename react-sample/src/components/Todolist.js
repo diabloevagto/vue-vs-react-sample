@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import TodoInput from './TodoInput';
+import TodoDisplay from './TodoDisplay';
 
 class Todolist extends Component {
   state = { todos: [] };
@@ -20,9 +21,7 @@ class Todolist extends Component {
       <div>
         <h1>todo list</h1>
         <TodoInput addNewTodo={this.addNewTodo} />
-        {todos.map(el => (
-          <p key={el}>{el}</p>
-        ))}
+        <TodoDisplay todos={todos} />
       </div>
     );
   }
