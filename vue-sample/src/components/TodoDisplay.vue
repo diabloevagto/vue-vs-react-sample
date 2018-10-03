@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>all todos</h1>
     <p
       v-for="(todo, idx) in todos"
       :key="idx"
@@ -14,4 +15,10 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  color: green;
+}
+p {
+  color: red;
+}
 </style>
